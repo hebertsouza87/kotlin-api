@@ -7,6 +7,6 @@ import org.koin.dsl.module.module
 object ServicesModule {
 
     fun modules() = module {
-        single { UserServiceImpl() as UserService }
+        single { UserServiceImpl(get()) as UserService }
     }
 }
