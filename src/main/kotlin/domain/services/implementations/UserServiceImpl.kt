@@ -10,7 +10,7 @@ class UserServiceImpl(
 
     private val userList: ArrayList<User> = ArrayList()
 
-    override fun getUser(): ArrayList<User> {
+    override fun getUsers(): ArrayList<User> {
         return userList
     }
 
