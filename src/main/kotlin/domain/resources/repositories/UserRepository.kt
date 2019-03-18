@@ -1,4 +1,4 @@
-package domain.repositories
+package domain.resources.repositories
 
 import domain.entities.User
 

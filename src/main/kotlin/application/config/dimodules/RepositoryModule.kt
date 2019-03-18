@@ -1,7 +1,7 @@
 package application.config.dimodules
 
-import domain.repositories.UserRepository
 import domain.resources.UserRepositoryImpl
+import domain.resources.repositories.UserRepository
 import org.koin.dsl.module.module
 
 object RepositoryModule {

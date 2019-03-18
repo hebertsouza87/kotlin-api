@@ -1,4 +1,4 @@
-package resources.datasources
+package domain.resources.datasources
 
 interface DataSource {
 

@@ -9,6 +9,13 @@
         <option value="noActionIfCompileErrors" />
         <option value="organizeImports" />
         <option value="reformat" />
+        <option value="missingOverrideAnnotation" />
+        <option value="unnecessaryThis" />
+        <option value="finalPrivateMethod" />
+        <option value="unnecessaryFinalOnLocalVariableOrParameter" />
+        <option value="explicitTypeCanBeDiamond" />
+        <option value="suppressAnnotation" />
+        <option value="unnecessarySemicolon" />
       </set>
     </option>
     <option name="configurationPath" value="" />

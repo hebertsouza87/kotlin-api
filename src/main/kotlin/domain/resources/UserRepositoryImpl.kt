@@ -1,7 +1,7 @@
 package domain.resources
 
 import domain.entities.User
-import domain.repositories.UserRepository
+import domain.resources.repositories.UserRepository
 import domain.resources.schemas.UserTable
 import domain.resources.schemas.toUser
 import org.jetbrains.exposed.sql.insert

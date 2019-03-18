@@ -3,13 +3,13 @@ package application.web
 import application.config.EnvironmentConfig
 import application.config.dimodules.*
 import application.web.routes.UserRoutes
+import domain.resources.datasources.DataSource
 import io.javalin.Javalin
 import io.javalin.JavalinEvent
 import org.koin.standalone.KoinComponent
 import org.koin.standalone.StandAloneContext.startKoin
 import org.koin.standalone.StandAloneContext.stopKoin
 import org.koin.standalone.inject
-import resources.datasources.DataSource
 
 class API : KoinComponent {
     private val userRoutes: UserRoutes by inject()

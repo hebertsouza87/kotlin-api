@@ -1,7 +1,7 @@
 package domain.services.implementations
 
 import domain.entities.User
-import domain.repositories.UserRepository
+import domain.resources.repositories.UserRepository
 import domain.services.UserService
 
 class UserServiceImpl(
