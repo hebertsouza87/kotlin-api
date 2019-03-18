@@ -8,15 +8,14 @@ class UserServiceImpl(
     private val userRepository: UserRepository
 ) : UserService {
 
-    private val userList: ArrayList<User> = ArrayList()
+    override fun getUsers(id: String?): List<User> =
+        id?.let {
+            userRepository.findById(it).let { users ->
+                users
+            }
+        } ?: userRepository.getAll()
 
-    override fun getUsers(): ArrayList<User> {
-        return userList
-    }
 
-    override fun create(user: User): User {
-        userRepository.insert(user)
-        userList.add(user)
-        return user
-    }
+    override fun create(user: User): User = userRepository.insert(user)
+
 }

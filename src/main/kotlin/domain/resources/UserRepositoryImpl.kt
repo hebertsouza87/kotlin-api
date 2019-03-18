@@ -6,6 +6,7 @@ import domain.resources.schemas.UserTable
 import domain.resources.schemas.toUser
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
+import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class UserRepositoryImpl : UserRepository {
@@ -17,11 +18,18 @@ class UserRepositoryImpl : UserRepository {
         }
     }
 
-    override fun findOneById(id: String) = transaction {
+    override fun findById(id: String) = transaction {
         UserTable.select {
             UserTable.id eq id
         }.map {
             it.toUser()
-        }.firstOrNull()
+        }
+    }
+
+    override fun getAll() = transaction {
+        UserTable.selectAll()
+            .map {
+                it.toUser()
+            }
     }
 }

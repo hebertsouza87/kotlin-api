@@ -9,7 +9,7 @@ class UserController(
 ) {
 
     fun get(ctx: Context) {
-        ctx.json(userService.getUsers())
+        ctx.json(userService.getUsers(ctx.queryParam("user")))
     }
 
     fun create(ctx: Context) {
