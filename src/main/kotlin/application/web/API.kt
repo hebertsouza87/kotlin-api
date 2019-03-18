@@ -1,5 +1,6 @@
 package application.web
 
+import application.config.EnvironmentConfig
 import application.config.dimodules.*
 import application.web.routes.UserRoutes
 import io.javalin.Javalin
@@ -12,6 +13,7 @@ import resources.datasources.DataSource
 
 class API : KoinComponent {
     private val userRoutes: UserRoutes by inject()
+    private val environmentConfig: EnvironmentConfig by inject()
     private val dataSource by inject<DataSource>()
 
     fun init() {
@@ -42,7 +44,7 @@ class API : KoinComponent {
                 stopKoin()
                 stopDBConnection()
             }
-        }.start(7000)
+        }.start(environmentConfig.serverPort)
 
     }
 
